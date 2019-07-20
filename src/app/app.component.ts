@@ -9,6 +9,9 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
+   a: any;
+   b: any;
+   c: any;
    constructor() {
 
    }
@@ -16,11 +19,11 @@ export class AppComponent implements OnInit {
       console.log('here1');
       window.addEventListener('deviceorientation', function(event) {
          console.log('here');
-        // alpha  = event.alpha;
-        // beta = event.beta;
+         //alpha  = event.alpha;
+         //beta = event.beta;
         // gamma = event.gamma;
-         window.alert('woop');
-         console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
+         //a = event.alpha;
+         window.alert(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
       });
    }
 
