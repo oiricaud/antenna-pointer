@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
             this.b = Math.round(event.beta); // ok now
             this.c = Math.round(event.gamma); // ok now
 
-            return event.alpha + event.beta + event.gamma;
+            console.window(event.alpha + event.beta + event.gamma);
          });
 
    }
