@@ -12,9 +12,9 @@ declare const window: any;
 
 export class AppComponent implements OnInit {
 
-   a: number;
-   b: number;
-   c: number;
+   a: number = 0;
+   b: number = 0;
+   c: number = 0;
    constructor() {
 
    }
@@ -27,13 +27,6 @@ export class AppComponent implements OnInit {
             this.b = Math.round(event.beta); // ok now
             this.c = Math.round(event.gamma); // ok now
 
-            //alpha  = event.alpha;
-            //beta = event.beta;
-            // gamma = event.gamma;
-            //this.alpha = a;
-            //a = event.alpha;
-            // this.a = event.gamma.toLocaleString();
-            //window.alert(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
             return event.alpha + event.beta + event.gamma;
          });
 
