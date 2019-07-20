@@ -1,19 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 
+
+declare let alpha: any;
+declare let beta: any;
+declare let gamma: any;
+
 @Component({
    selector: 'app-root',
    templateUrl: './app.component.html',
    styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
-   alpha: any = 0;
-   beta: any = 0;
-   gamma: any = 0;
+   constructor() {
+
+   }
    ngOnInit() {
+      console.log('here1');
       window.addEventListener('deviceorientation', function(event) {
-         this.alpha = event.alpha;
-         this.beta = event.beta;
-         this.gamma = event.gamma;
+         console.log('here');
+         alpha  = event.alpha;
+         beta = event.beta;
+         gamma = event.gamma;
          console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
       });
    }
