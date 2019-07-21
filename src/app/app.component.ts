@@ -8,19 +8,28 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
+   c = 0;
+   myVariable: any;
 
-   deviceOirentation: DeviceOrientationEvent;
-   a: any = 0;
-   b: any = 0;
-   c: any = 0;
    ngOnInit() {
-      try {
-         this.a = this.deviceOirentation.alpha;
-         this.b = this.deviceOirentation.beta;
-         this.c = this.deviceOirentation.gamma
-      } catch(e) {
-         console.log(e);
-      }
+      this.deviceOrientationListener(window);
+      let rollValue;
+
+      window.addEventListener('deviceorientation',
+         function(event) {
+            var a = event.alpha;
+            var b = event.beta;
+            var g = event.gamma;
+            rollValue = event.gamma;
+      }, false);
+      this.c = rollValue;
+   }
+
+
+
+   deviceOrientationListener(event) {
+      this.c = event.gamma;
+      console.log('event.gamma ' + event.gamma);
    }
 }
    
