@@ -10,6 +10,11 @@ import {Component, OnInit} from '@angular/core';
 export class AppComponent implements OnInit {
 
    ngOnInit() {
+      let temp: string = "";
+      let degrees: number = 280;
+      temp = 'rotate(' + 149 + 'deg)';
+      document.getElementById("test").style.webkitTransform = temp;
+
       window.addEventListener('deviceorientation',
          function(event) {
 
