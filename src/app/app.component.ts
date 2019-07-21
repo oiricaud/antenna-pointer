@@ -8,27 +8,18 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
-   c = 0;
-   myVariable: any;
 
    ngOnInit() {
-      let rollValue: number = 0;
-
       window.addEventListener('deviceorientation',
          function(event) {
-            var a = event.alpha;
-            var b = event.beta;
-            var g = event.gamma;
-            rollValue = event.gamma;
             window.alert('event.gamma ' + event.gamma);
             var inputElement = document.getElementById('a');
-
-            var inputElement2 = document.getElementById('c');
-            inputElement.textContent = JSON.stringify(event.gamma);
-            inputElement2.textContent = "woop";
-
+            var inputElement2 = document.getElementById('b');
+            var inputElement3 = document.getElementById('c');
+            inputElement.textContent = JSON.stringify(event.alpha);
+            inputElement2.textContent = JSON.stringify(event.beta);
+            inputElement3.textContent = JSON.stringify(event.gamma);
       }, false);
-      this.c = rollValue;
    }
 }
    
