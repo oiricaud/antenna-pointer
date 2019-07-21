@@ -12,15 +12,8 @@ export class AppComponent implements OnInit {
    ngOnInit() {
       window.addEventListener('deviceorientation',
          function(event) {
-            var inputElement = document.getElementById('a'); // z axis [0, 360]
-            var inputElement2 = document.getElementById('b'); //x axis [-180, 180]
-            var inputElement3 = document.getElementById('c'); // y axis [-90, 90]
 
             var heading  = 360 - event.alpha; //heading [0, 360)
-
-            inputElement.textContent = JSON.stringify(event.alpha);
-            inputElement2.textContent = JSON.stringify(event.beta);
-            inputElement3.textContent = JSON.stringify(event.gamma);
 
             document.getElementById("heading").innerHTML = heading.toFixed(0);
 
@@ -34,6 +27,12 @@ export class AppComponent implements OnInit {
             } else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
             }
+
+            let temp: string = "";
+            let degrees: number = 280;
+            temp = 'rotate(' + heading.toFixed(0) + 'deg)';
+            document.getElementById("test").style.webkitTransform = temp;
+
          }, false);
    }
 }

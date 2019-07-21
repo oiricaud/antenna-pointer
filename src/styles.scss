@@ -1,8 +1,16 @@
 html {
     height: 100%;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 body {
     min-height: 100%;
+    font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to top, #64a8eb, #4e9eef, #3893f3, #1f88f5, #007cf7);
+}
+
+h1, h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: lighter;
 }
