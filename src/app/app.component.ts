@@ -21,6 +21,12 @@ export class AppComponent implements OnInit {
             var g = event.gamma;
             rollValue = event.gamma;
             window.alert('event.gamma ' + event.gamma);
+            var inputElement = document.getElementById('a');
+
+            var inputElement2 = document.getElementById('c');
+            inputElement.textContent = JSON.stringify(event.gamma);
+            inputElement2.textContent = "woop";
+
       }, false);
       this.c = rollValue;
    }
