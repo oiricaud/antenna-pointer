@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
          this.setCurrentSlide(1);
          setTimeout(() => {
             this.setCurrentSlide(2);
-         }, 3*1000);
+         }, 2*1000);
          console.log('after time out ' + this.currentSlide);
       } else {
          console.log('else ' + this.currentSlide++);
