@@ -69,17 +69,24 @@
 
 
     <div *ngIf="getCurrentSlide() === 4">
-        <h1> Pointing in the right direction </h1>
 
-        <h2> The minute hand is where you’re pointing </h2>
+        <h1 class="second-slide-h1" style="width: 300px">  Pointing in the right direction </h1>
+        <h4 style="height: 50px; margin-left: 30px; margin-right: 30px;">
+            The minute hand is where you’re pointing
+        </h4>
 
-        <div id="outer-ring">
-
+        <div class="container" style="width: 100%">
+            <div id="outer-ring">
+            </div>
+            <h3 style="position: absolute; top: 270px;"> The hour hand is SATTEFI-US-117</h3>
+            <div class="bottom-container" style="position: absolute; top: 500px;">
+                <button class="btn purple" type="button" (click)="nextSlide()"><span>Next</span></button>
+            </div>
         </div>
-        <h3> The hour hand is SATTEFI-US-117</h3>
-        <button class="start" (click)="nextSlide()">
-            Start
-        </button>
+
+
+
+
     </div>
 
 
