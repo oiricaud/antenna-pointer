@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
    ngOnInit() {
       this.deviceOrientationListener(window);
-      let rollValue;
+      let rollValue: number = 0;
 
       window.addEventListener('deviceorientation',
          function(event) {
@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
             var b = event.beta;
             var g = event.gamma;
             rollValue = event.gamma;
+            window.alert('event.gamma ' + event.gamma);
       }, false);
       this.c = rollValue;
    }
