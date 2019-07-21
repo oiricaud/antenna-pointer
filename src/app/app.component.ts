@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
             inputElement2.textContent = JSON.stringify(event.beta);
             inputElement3.textContent = JSON.stringify(event.gamma);
 
-            document.getElementById("heading").innerHTML = heading.toFixed([0]);
+            document.getElementById("heading").innerHTML = heading.toFixed();
 
             if (heading > 359 || heading < 1) { //Allow +- 1 degree
                document.body.style.backgroundColor = "green";
