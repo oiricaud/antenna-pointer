@@ -31,23 +31,22 @@
         </div>
         <app-satellite class="bottom-left-satellite"></app-satellite>
         <app-satellite class="bottom-right-satellite"></app-satellite>
-
-
-
     </div>
 
     <div *ngIf="getCurrentSlide() === 2">
-        <h1> Finding Your Satellite</h1>
+        <h1 class="second-slide-h1"> Finding Your Satellite</h1>
+        <h4 style="height: 120px; margin-left: 30px; margin-right: 30px;">
+            We've found the best satellite for you at your current location. Say 'hello' to your new best friend, SATTEFI-US-117
+        </h4>
 
-        <h2> We've found the best satellite for you at your current location. Say 'hello' to your new best friend, SATTEFI-US-117</h2>
-
-        <div class="earth">
-
+        <app-satellite class="right-satellite"></app-satellite>
+        <div class="container" style="width: 100%">
+            <div class="earth" style="position: absolute; top: 130px">
+            </div>
         </div>
-
-        <button class="start" (click)="nextSlide()">
-            Next
-        </button>
+        <div class="bottom-container">
+            <button class="btn purple" type="button" (click)="nextSlide()"><span>Next</span></button>
+        </div>
     </div>
 
     <div *ngIf="getCurrentSlide() === 3">
