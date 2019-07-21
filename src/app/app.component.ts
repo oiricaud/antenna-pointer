@@ -9,12 +9,12 @@ import {Component, OnInit} from '@angular/core';
 
 export class AppComponent implements OnInit {
 
-   ngOnInit() {
-      let temp: string = "";
-      let degrees: number = 280;
-      temp = 'rotate(' + 149 + 'deg)';
-      document.getElementById("test").style.webkitTransform = temp;
+   currentSlide: number;
 
+   constructor() {
+      this.currentSlide = 0;
+   }
+   ngOnInit() {
       window.addEventListener('deviceorientation',
          function(event) {
 
@@ -36,9 +36,28 @@ export class AppComponent implements OnInit {
             let temp: string = "";
             let degrees: number = 280;
             temp = 'rotate(' + heading.toFixed(0) + 'deg)';
-            document.getElementById("test").style.webkitTransform = temp;
+            document.getElementById("compass").style.webkitTransform = temp;
 
          }, false);
+   }
+
+   nextSlide() {
+      if (this.currentSlide === 0) {
+         this.setCurrentSlide(1);
+         setTimeout(() => {
+            this.setCurrentSlide(2);
+         }, 3*1000);
+         console.log('after time out ' + this.currentSlide);
+      } else {
+         console.log('else ' + this.currentSlide++);
+         this.setCurrentSlide(this.currentSlide++);
+      }
+   }
+   public setCurrentSlide(slide: number) {
+      this.currentSlide = slide;
+   }
+   getCurrentSlide(): number {
+      return this.currentSlide;
    }
 }
    

@@ -1,3 +1,8 @@
+.slide-containers .slide {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
 p {
     font-family: verdana;
     font-size: 12px;
@@ -13,10 +18,116 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    height: 100%;
+}
+.bottom-container {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
 }
 
-div.a {
-    width: 150px;
-    height: 80px;
-    background-color: yellow;
+#compass {
+    width: 113px;
+    height: 113px;
+    background-image: url("../assets/compass.png");
 }
+
+.earth {
+    width: 130px;
+    height: 130px;
+    background-image: url("../assets/earth.svg");
+}
+
+#outer-ring {
+    background-image: url("../assets/outer-ring.svg");
+
+}
+
+.flex-center-bottom {
+    background-color: #739FD0;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+.flex-item-center {
+    border: solid 2px #4675AA;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+}
+
+.btn {
+    justify-content: flex-end;
+    display: flex;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    color: #ecf0f1;
+    transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #27ae60;
+}
+
+.btn > * {
+    position: relative;
+}
+
+.btn span {
+    display: block;
+    padding: 5px 17px;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.btn:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, .3);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn.purple {
+    background-color: #9013FE;
+    border-radius: 15px;
+}
+
+.btn.purple:hover, .btn.purple:focus {
+    background-color: #691aaf;
+}
+

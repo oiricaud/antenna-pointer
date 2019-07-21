@@ -1,18 +1,90 @@
-<h1>
-    SatteFi TM
-</h1>
-<div class="container">
-    <h4>
-        You’re just moments away from crystal-clear phone calls and all-you-can-type messaging! Let’s get your antenna set up.
-    </h4>
-    <button class="start">
-        Start
-    </button>
-    <div id="test">
-        <div class="a">Hello World!</div>
-        <br>
+
+<div class="slide-containers">
+    <div *ngIf="getCurrentSlide() === 0" class="slide">
+        <h1>
+            SatteFi&trade;
+        </h1>
+        <div class="container">
+            <h4>
+                You’re just moments away from crystal-clear phone calls and all-you-can-type messaging! Let’s get your antenna set up.
+            </h4>
+
+            <div class="bottom-container">
+                <button class="btn purple" type="button" (click)="nextSlide()"><span>Start</span></button>
+            </div>
+
+        </div>
+        <!--
+        <div id="compass"> </div>
+        <p id="heading" style="text-align:center"></p>
+        -->
     </div>
 
-</div>
+    <div *ngIf="getCurrentSlide() === 1">
+        <h1> Finding Your Satellite</h1>
 
-<p id="heading" style="text-align:center"></p>
+        <h2> We have lots of satellites. We're looking for a good match</h2>
+
+        <div class="earth">
+
+        </div>
+    </div>
+
+    <div *ngIf="getCurrentSlide() === 2">
+        <h1> Finding Your Satellite</h1>
+
+        <h2> We've found the best satellite for you at your current location. Say 'hello' to your new best friend, SATTEFI-US-117</h2>
+
+        <div class="earth">
+
+        </div>
+
+        <button class="start" (click)="nextSlide()">
+            Next
+        </button>
+    </div>
+
+    <div *ngIf="getCurrentSlide() === 3">
+        <h1> Pointing in the right direction </h1>
+
+        <h2> Stand with your phone in your hand, arm extended, screen facing up, and rotate on your feet until the two clock hands on the next scree are at midnight.</h2>
+
+        <div id="earth-3">
+
+        </div>
+
+        <button class="start" (click)="nextSlide()">
+            Start
+        </button>
+    </div>
+
+
+    <div *ngIf="getCurrentSlide() === 4">
+        <h1> Pointing in the right direction </h1>
+
+        <h2> The minute hand is where you’re pointing </h2>
+
+        <div id="outer-ring">
+
+        </div>
+        <h3> The hour hand is SATTEFI-US-117</h3>
+        <button class="start" (click)="nextSlide()">
+            Start
+        </button>
+    </div>
+
+
+    <div *ngIf="getCurrentSlide() === 5">
+        <h1> Pointing in the right direction </h1>
+
+        <h2> The minute hand is where you’re pointing </h2>
+
+        <div id="outer-ring">
+
+        </div>
+        <h3> Perfect</h3>
+        <button class="start">
+            Start
+        </button>
+    </div>
+</div>
