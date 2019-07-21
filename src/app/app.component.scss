@@ -108,6 +108,7 @@ app-loading-spinner {
     height: 47px;
     position: absolute;
     top: 100px;
+    z-index: 10;
     background-image: url("../assets/inner ring.svg");
 }
 .flex-center-bottom {
