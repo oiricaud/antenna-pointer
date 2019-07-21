@@ -85,6 +85,31 @@ app-loading-spinner {
     background-image: url("../assets/outer-ring.svg");
 }
 
+.big-hand {
+    width: 12px;
+    top: 30px;
+    height: 80px;
+    position: absolute;
+    background-image: url("../assets/long hand.svg");
+}
+.little-hand {
+    width: 8px;
+    height: 52px;
+    position: absolute;
+    top: 124px;
+    right: 217px;
+    z-index: 1;
+    -webkit-transform: rotate(37deg);
+    transform: rotate(56deg);
+    background-image: url("../assets/short hand.svg");
+}
+.inner-ring {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 100px;
+    background-image: url("../assets/inner ring.svg");
+}
 .flex-center-bottom {
     background-color: #739FD0;
     color: #000000;
