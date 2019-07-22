@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
             let heading  = 360 - event.alpha; //heading [0, 360)
             document.getElementById("heading").innerHTML = heading.toFixed(0);
 
-            if (heading > 174 && heading < 186){ //Allow +- 5 degree
+            if (heading > 150 && heading < 200){ //Allow +- 5 degree
+               document.getElementById("outer-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%)";
+            } else if (heading > 174 && heading < 186){ //Allow +- 5 degree
                document.body.style.backgroundColor = "#9013FE";
                document.getElementById("heading").innerHTML = "S"; // South
                document.getElementById("perfect").innerHTML = "Perfect!";
