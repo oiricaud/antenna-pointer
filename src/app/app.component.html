@@ -32,7 +32,6 @@
         </h4>
 
         <app-satellite class="right-satellite"></app-satellite>
-
         <div class="container">
             <div class="earth">
             </div>
@@ -49,30 +48,29 @@
             Stand with your phone in your hand, arm extended, screen facing up, and rotate on your
             feet until the two clock hands on the next scree are at midnight.
         </h4>
-
         <div class="container">
             <div class="compass">
             </div>
         </div>
-
         <div class="bottom-container">
             <button class="btn purple" type="button" (click)="nextSlide()"><span>Next</span></button>
         </div>
-
     </div>
 
 
     <div *ngIf="getCurrentSlide() === 4" class="slide-4">
         <h1> Pointing in the right direction </h1>
-        <h4> The <b> minute hand </b> is where you’re pointing</h4>
+        <h4> The <b> minute hand </b> is where you’re pointing </h4>
+
         <p id="heading"></p>
-        <h4 id="perfect"></h4>
+        <h4 id="perfect">perfect</h4>
         <div class="container">
             <div id="outer-ring"> </div>
             <div id="inner-ring"> </div>
             <div class="big-hand"></div>
             <div id="little-hand"> </div>
-            <h3> The <b> hour hand </b> is SATTEFI-US-117</h3>
+            <h3> The <b> hour hand </b> is SATTEFI-US-117 </h3>
+
             <div class="bottom-container">
                 <button class="btn purple" type="button" (click)="nextSlide()" disabled><span>Next</span></button>
             </div>

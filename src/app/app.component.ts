@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
 
+/** @author Oscar Ivan Ricaud
+ * Class is responsible for handling the page events when the state changes
+ */
 @Component({
    selector: 'app-root',
    templateUrl: './app.component.html',
@@ -15,9 +18,10 @@ export class AppComponent implements OnInit {
       this.currentSlide = 0;
    }
    ngOnInit() {
+      // listen to device orientation and update the DOM elements
       window.addEventListener('deviceorientation',
          function(event) {
-            let heading  = 360 - event.alpha; //heading [0, 360)
+            let heading  = 360 - event.alpha; //heading range [0, 360)
             document.getElementById("heading").innerHTML = heading.toFixed(0);
             document.getElementById("little-hand").style.filter = "invert(55%) sepia(82%) saturate(5350%) hue-rotate(262deg) brightness(62%) contrast(105%)";
             // 180
@@ -49,9 +53,7 @@ export class AppComponent implements OnInit {
          setTimeout(() => {
             this.setCurrentSlide(2);
          }, 2*1000);
-         console.log('after time out ' + this.currentSlide);
       } else {
-         console.log('else ' + this.currentSlide++);
          this.setCurrentSlide(this.currentSlide++);
       }
    }
