@@ -22,7 +22,8 @@ export class AppComponent implements OnInit {
             document.getElementById("little-hand").style.filter = "invert(55%) sepia(82%) saturate(5350%) hue-rotate(262deg) brightness(62%) contrast(105%)";
             // 180
             if ((heading > 115 && heading < 174) || (heading  > 186 && heading < 240 )){ // [116, 139] || [188, 239] Allow +- 5 degree
-               document.getElementById("perfect").innerHTML = "So close..!";
+               document.getElementById("perfect").innerHTML = "So close..";
+               document.getElementById("perfect").style.top = "380px";
                document.getElementById("inner-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%)"; // light purple
                document.getElementById("outer-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%)"; // light purple
             } else if (heading > 174 && heading < 186){ // [175, 185] Allow +- 5 degree

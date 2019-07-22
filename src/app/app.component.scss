@@ -3,6 +3,123 @@
     height: 100%;
     width: 100%;
 }
+.slide-0 {
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+.slide-1 {
+    h1 {
+        width: 190px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding-top: 20px;
+    }
+    h4 {
+        height: 80px;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+.slide-2 {
+    h1 {
+        width: 190px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding-top: 20px;
+    }
+    h4 {
+        height: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .container {
+        width: 100%;
+    }
+    .earth {
+        position: absolute;
+        top: 130px
+    }
+    .right-satellite {
+        filter: grayscale(1);
+    }
+    .bottom-container {
+        position: absolute;
+        top: 500px;
+    }
+}
+.slide-3 {
+    h1 {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding-top: 20px;
+    }
+    h4 {
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .container {
+        width: 100%;
+    }
+    .compass {
+        position: absolute;
+        top: 130px
+    }
+    .bottom-container {
+        position: absolute;
+        top: 500px;
+    }
+}
+.slide-4 {
+    h1 {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding-top: 20px;
+    }
+    h3 {
+        position: absolute;
+        top: 270px;
+    }
+    h4 {
+        height: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    p {
+        text-align:center
+    }
+    b {
+        color: #7624a0
+    }
+    .container {
+        width: 100%;
+    }
+    #perfect {
+        text-align: center;
+        color: #9013FE;
+        font-weight: bolder;
+        position: absolute;
+        left: 145px;
+        top: 350px;
+    }
+    .bottom-container {
+        position: absolute;
+        top: 330px;
+    }
+}
 p {
     font-family: verdana;
     font-size: 12px;
@@ -10,7 +127,7 @@ p {
 }
 
 .start {
-    background-color: #7624a0;
+    background-color: #9013FE;
     color: white;
     border-radius: 10px;
 }
@@ -27,13 +144,7 @@ p {
     display: flex;
     width: 100%;
 }
-.second-slide-h1 {
-    width: 190px;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    padding-top: 20px;
-}
+
 app-loading-spinner {
     margin: auto;
     display: flex;
@@ -77,13 +188,6 @@ app-loading-spinner {
     width: 130px;
     height: 130px;
     background-image: url("../assets/earth.svg");
-}
-#perfect {
-    color: #7624a0;
-    font-weight: bolder;
-    position: absolute;
-    left: 145px;
-    top: 350px;
 }
 #outer-ring {
     width: 249px;
@@ -147,7 +251,7 @@ app-loading-spinner {
 }
 
 .btn:hover, .btn:focus {
-    background-color: #7624a0;
+    background-color: #9013FE;
 }
 
 .btn > * {
@@ -198,6 +302,6 @@ app-loading-spinner {
 }
 
 .btn.purple:hover, .btn.purple:focus {
-    background-color: #7624a0;
+    background-color: #9013FE;
 }
 
