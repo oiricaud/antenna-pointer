@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
                document.getElementById("outer-ring").style.filter = "invert(21%) sepia(76%) saturate(5486%) hue-rotate(268deg) brightness(93%) contrast(118%);";
             } else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
-               document.getElementById("outer-ring").style.filter = "grayscale(1)";
+               //document.getElementById("outer-ring").style.filter = "grayscale(1)";
                document.getElementById("perfect").innerHTML = "";
             }
             document.getElementById("little-hand").style.webkitTransform = 'rotateZ(' + heading.toFixed(0) + 'deg) translate(0px, 43px);';
