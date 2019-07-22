@@ -27,10 +27,7 @@ export class AppComponent implements OnInit {
                document.getElementById("heading").innerHTML = "N"; // North
                document.getElementById("perfect").innerHTML = "Perfect!";
             }
-            else if (heading > 174 && heading < 186){ //Allow +- 5 degree
-               document.body.style.backgroundColor = "#9013FE";
-               document.getElementById("heading").innerHTML = "S"; // South
-            } else { // Otherwise, use near black
+            else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
             }
 
