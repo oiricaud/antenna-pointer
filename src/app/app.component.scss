@@ -96,11 +96,10 @@ app-loading-spinner {
     width: 8px;
     height: 52px;
     position: absolute;
-    top: 124px;
-    right: 217px;
+    top: 99px;
+    right: 183px;
     z-index: 1;
-    -webkit-transform: rotate(37deg);
-    transform: rotate(56deg);
+    transform: rotateZ(0deg) translate(0px, 43px);
     background-image: url("../assets/short hand.svg");
 }
 .inner-ring {
