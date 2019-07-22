@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
             let temp: string = "";
             let degrees: number = 280;
             temp = 'rotate(' + heading.toFixed(0) + 'deg)';
-            document.getElementById("compass").style.webkitTransform = temp;
+            document.getElementById("little-hand").style.webkitTransform = temp;
 
          }, false);
    }
