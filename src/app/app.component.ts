@@ -54,6 +54,7 @@ export class AppComponent implements OnInit {
             this.setCurrentSlide(2);
          }, 2*1000);
       } else {
+         this.currentSlide++;
          this.setCurrentSlide(this.currentSlide++);
       }
    }
