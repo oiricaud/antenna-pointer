@@ -21,10 +21,10 @@ export class AppComponent implements OnInit {
             document.getElementById("heading").innerHTML = heading.toFixed(0);
 
             // 180
-            if ((heading > 115 && heading < 140) || (heading  > 187 && heading < 240 )){ // [116, 139] || [188, 239] Allow +- 5 degree
+            if ((heading > 115 && heading < 174) || (heading  > 186 && heading < 240 )){ // [116, 139] || [188, 239] Allow +- 5 degree
                document.getElementById("outer-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%)"; // light purple
             } else if (heading > 174 && heading < 186){ // [175, 185] Allow +- 5 degree
-               document.body.style.backgroundColor = "#9013FE";
+               document.body.style.backgroundColor = "#7624a0";
                document.getElementById("heading").innerHTML = "S"; // South // [115 - 245]
                document.getElementById("perfect").innerHTML = "Perfect!";
                document.getElementById("perfect").style.top = "380px";
