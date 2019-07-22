@@ -22,18 +22,18 @@ export class AppComponent implements OnInit {
 
             // 180
             if (heading > 115 && heading < 140){ // [116, 139] Allow +- 5 degree
-               document.getElementById("outer-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%);"; // light purple
+               document.getElementById("outer-ring").style.filter = "invert(52%) sepia(45%) saturate(6515%) hue-rotate(243deg) brightness(98%) contrast(105%)"; // light purple
             } else if (heading > 174 && heading < 186){ // [175, 185] Allow +- 5 degree
                document.body.style.backgroundColor = "#9013FE";
                document.getElementById("heading").innerHTML = "S"; // South // [115 - 245]
                document.getElementById("perfect").innerHTML = "Perfect!";
-               document.getElementById("outer-ring").style.filter = "invert(21%) sepia(76%) saturate(5486%) hue-rotate(268deg) brightness(93%) contrast(118%);";
+               document.getElementById("outer-ring").style.filter = "invert(21%) sepia(76%) saturate(5486%) hue-rotate(268deg) brightness(93%) contrast(118%)";
             } else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
-               //document.getElementById("outer-ring").style.filter = "grayscale(1)";
+               document.getElementById("outer-ring").style.filter = "grayscale(1)";
                document.getElementById("perfect").innerHTML = "";
             }
-            document.getElementById("little-hand").style.webkitTransform = 'rotateZ(' + heading.toFixed(0) + 'deg) translate(0px, 43px);';
+            document.getElementById("little-hand").style.webkitTransform = 'rotateZ(' + heading.toFixed(0) + 'deg) translate(0px, 43px)';
          }, false);
    }
 
