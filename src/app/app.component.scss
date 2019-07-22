@@ -78,10 +78,16 @@ app-loading-spinner {
     height: 130px;
     background-image: url("../assets/earth.svg");
 }
-
+#perfect {
+    color: #9013FE;
+    font-weight: bolder;
+    position: absolute;
+    left: 145px;
+    top: 340px;
+}
 #outer-ring {
-    width: 250px;
-    height: 248px;
+    width: 249px;
+    height: 249px;
     background-image: url("../assets/outer-ring.svg");
 }
 
@@ -141,7 +147,7 @@ app-loading-spinner {
 }
 
 .btn:hover, .btn:focus {
-    background-color: #27ae60;
+    background-color: #9013FE;
 }
 
 .btn > * {

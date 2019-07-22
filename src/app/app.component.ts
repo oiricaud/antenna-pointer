@@ -22,12 +22,13 @@ export class AppComponent implements OnInit {
 
             document.getElementById("heading").innerHTML = heading.toFixed(0);
 
-            if (heading > 359 || heading < 1) { //Allow +- 1 degree
-               document.body.style.backgroundColor = "green";
+            if (heading > 355 || heading < 5) { //Allow +- 5 degree
+               document.body.style.backgroundColor = "#9013FE";
                document.getElementById("heading").innerHTML = "N"; // North
+               document.getElementById("perfect").innerHTML = "Perfect!";
             }
-            else if (heading > 179 && heading < 181){ //Allow +- 1 degree
-               document.body.style.backgroundColor = "green";
+            else if (heading > 174 && heading < 186){ //Allow +- 5 degree
+               document.body.style.backgroundColor = "#9013FE";
                document.getElementById("heading").innerHTML = "S"; // South
             } else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
