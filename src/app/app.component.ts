@@ -17,29 +17,19 @@ export class AppComponent implements OnInit {
    ngOnInit() {
       window.addEventListener('deviceorientation',
          function(event) {
-
-            var heading  = 360 - event.alpha; //heading [0, 360)
-
+            let heading  = 360 - event.alpha; //heading [0, 360)
             document.getElementById("heading").innerHTML = heading.toFixed(0);
 
-
-            if (heading > 359 || heading < 1) { //Allow +- 1 degree
-               document.getElementById("perfect").innerHTML = "";
-            }
-            else if (heading > 179 && heading < 181){ //Allow +- 1 degree
+            if (heading > 174 && heading < 186){ //Allow +- 5 degree
                document.body.style.backgroundColor = "#9013FE";
                document.getElementById("heading").innerHTML = "S"; // South
                document.getElementById("perfect").innerHTML = "Perfect!";
                document.getElementById("perfect").style.top = "380px";
             } else { // Otherwise, use near black
                document.body.style.backgroundColor = "#161616";
+               document.getElementById("perfect").innerHTML = "";
             }
-
-            let temp: string = "";
-            let degrees: number = 280;
-            temp = 'rotateZ(' + heading.toFixed(0) + 'deg) translate(0px, 43px)';
-            document.getElementById("little-hand").style.webkitTransform = temp;
-
+            document.getElementById("little-hand").style.webkitTransform = 'rotateZ(' + heading.toFixed(0) + 'deg) translate(0px, 43px)';
          }, false);
    }
 
