@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ### You can visit for live demo, tested on iOS iPhone X using Google Chrome 
-https://dashboard.heroku.com/apps/antenna-pointer/activity
+https://antenna-pointer.herokuapp.com/
